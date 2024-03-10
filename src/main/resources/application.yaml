@@ -1,0 +1,15 @@
+spring:
+  jpa:
+   hibernate:
+     ddl-auto: create
+  datasource:
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: post21
+    url: jdbc:postgresql://localhost:5432/to_do_list
+
+rest:
+  endpoints:
+    - name: create-task
+      uri: http://localhost:8080/tasks
+
