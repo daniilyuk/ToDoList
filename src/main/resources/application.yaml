@@ -1,7 +1,8 @@
 spring:
   jpa:
-   hibernate:
-     ddl-auto: create
+    hibernate:
+      ddl-auto: create
+      dialect: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     driverClassName: org.postgresql.Driver
     username: postgres
@@ -12,4 +13,3 @@ rest:
   endpoints:
     - name: create-task
       uri: http://localhost:8080/tasks
-

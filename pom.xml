@@ -11,7 +11,7 @@
     <groupId>ru.todolist.manager</groupId>
     <artifactId>ToDoLIstManager</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>ToDoLIstManager</name>
     <description>ToDoLIstManager</description>
     <properties>
@@ -79,11 +79,23 @@
 
     </dependencies>
 
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.4.1</version>
+                <configuration>
+                    <to>
+                        <image>docker.io/daniilyuk/to-do-list</image>
+                    </to>
+                </configuration>
             </plugin>
 
         </plugins>
